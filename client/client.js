@@ -1,6 +1,6 @@
-const socketProtocol = window.location.protocol === 'https' ? 'wss' : 'ws';
-const socket = new WebSocket(`${socketProtocol}://${window.location.host}`);
 const clientsElement = document.querySelector('#clients');
+const socket_protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+const socket = new WebSocket(socket_protocol + '://' + window.location.host);
 
 socket.addEventListener('open', () => {
   console.log('COnnected To Server!');
