@@ -1,4 +1,4 @@
-const socketProtocol = window.location.protocol === 'http' ? 'wss' : 'ws';
+const socketProtocol = window.location.protocol === 'https' ? 'wss' : 'ws';
 const socket = new WebSocket(`${socketProtocol}://${window.location.host}`);
 const clientsElement = document.querySelector('#clients');
 
